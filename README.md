@@ -22,7 +22,7 @@ docker run -d --name opsani-servo \
 
 Where:
  * `/path/to/optune_auth_token` - file containing the authentication token for the Optune backend service
- * `/path/to/config.yaml:` - config file containing the configuration for the [spinnaker](https://github.com/opsani/servo-spinnaker) and [wavefront](https://github.com/opsani/servo-wavefront) drivers (see links for details on how to configure each).
+ * `/path/to/config.yaml` - config file containing the configuration for the [spinnaker](https://github.com/opsani/servo-spinnaker) and [wavefront](https://github.com/opsani/servo-wavefront) drivers (see links for details on how to configure each).
  * `my_account` - your Optune account name
  * `my_app` - the application name
 
