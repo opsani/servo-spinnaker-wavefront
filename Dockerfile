@@ -15,6 +15,11 @@ ADD https://raw.githubusercontent.com/opsani/servo-spinnaker/master/adjust \
     https://raw.githubusercontent.com/opsani/servo/master/servo \
     /servo/
 
+ADD https://raw.githubusercontent.com/opsani/encoder-jvm/master/encoders/__init__.py  \
+    https://raw.githubusercontent.com/opsani/encoder-jvm/master/encoders/jvm.py \
+    https://raw.githubusercontent.com/opsani/servo/master/encoders/base.py \
+    /servo/encoders/
+
 RUN chmod a+rwx /servo/adjust /servo/measure /servo/servo
 
 ENV PYTHONUNBUFFERED=1
