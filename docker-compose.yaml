@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  opsani-servo:
+    network_mode: host # Optional
+    build:
+      network: host # Optional
+      context: .
+    restart: always
+    volumes:
+      - type: bind
+        source: ./config.yaml
+        target: /servo/config.yaml
+        read_only: true
+      - type: bind
+        source: ./optune.token
+        target: /run/secrets/optune_auth_token
+        read_only: true
+    command: --account ${ACCOUNT_ID} ${APP_ID}
